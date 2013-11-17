@@ -59,7 +59,6 @@ return array(
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
-			'tablePrefix'=>'oa_',
 			'charset' => 'utf8',
 		),
 		
