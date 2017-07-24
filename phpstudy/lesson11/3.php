@@ -3,10 +3,10 @@
 class person{
     private $age = 18;
     protected $name = "feiy";
-    public $sex = "男";
+    public $sex =  "男";
     
     function __construct(){
-//         echo 1;
+//         echo 1;  sasd 
     }
     
     function __destruct(){
