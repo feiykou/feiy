@@ -3,7 +3,7 @@
 class person{
     private $age = 18;
     protected $name = "feiy";
-    public $sex =  "男";
+    public $sex =  "男de ";
     
     function __construct(){
 //         echo 1;  sasd 
