@@ -7,7 +7,7 @@ class person{
     
     function __construct(){
 //         echo 1;  sasd 
-    }
+    } 
     
     function __destruct(){
 //         echo "脚本结束！";
