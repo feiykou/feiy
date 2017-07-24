@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<button id="btn">提交</button>
+		
+		<script src="jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				/**
+				 * $.ajax(); 它的参数是一个json格式的数据
+				 */
+				
+				$("#btn").click(function(){
+					$.ajax({
+						url:'3.php',
+						data:{'user':'xiaoming','pass':'123456'},
+						type:'get',
+						success:function(data){
+							alert(data);
+						}
+					});
+				});
+				
+			};
+		</script>
+	</body>
+</html>
