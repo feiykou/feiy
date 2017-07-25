@@ -36,6 +36,7 @@ class test{
 echo test::alert();
 echo test::age;
 
+echo test::arr;
 
 
 

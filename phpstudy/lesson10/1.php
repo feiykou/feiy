@@ -10,21 +10,22 @@
  * 变量使用$this引用，常量使用self引用
  */
 
+define("root","127.0.0.1");
 class person{
     public $age = 16;
     public $name;
     const souce = '猴子';
-    
     function __construct($name){
         $this->name = $name;
+        
 //         $this->age = $age;
-        echo "{$this->name},{$this->age}岁，他的先祖是".self::souce."<br>";
+//         echo "{$this->name},{$this->age}岁，他的先祖是".self::souce."<br>";
     }
 }
 
 $feiy = new person("飞扬");
 $zhuo = new person("卓儿");
-
+echo person::souce;
 
 
 
