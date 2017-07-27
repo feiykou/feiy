@@ -54,7 +54,6 @@ header("content-type:text/html;charset=utf-8");
 echo "<pre>";
 //如果文件过大，获取是空   
 print_r($_FILES);//脚本执行完，删除tmp中的中转文件
-
 $file = $_FILES['file'];
 $arrow = array(".jpg",".png",".gif",".docx",".xlsx",".wmv",".swf");
 /**
