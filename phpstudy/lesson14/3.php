@@ -2,7 +2,14 @@
 
 // M('stu').where('id=6').delete();
 
-class db{
+//数据库类
+interface base{
+    function add();
+    function save();
+    function find();
+}
+
+class db implements base{
     
     public $conn = null;
     public $table = '';
@@ -24,6 +31,7 @@ class db{
         return $this;
     }
     
+    //条件解析
     function where($where=''){
         if(empty($where)){
            die("where的条件不能为空！"); 
@@ -31,10 +39,11 @@ class db{
         
         if(is_array($where)){
             foreach ($where as $k=>$v){
-                $this->option[$k] = $v;
+                //设置option['where']的原因是：在后面对数组和字符串进行统一判断
+                $this->option['where'][$k] = $v;
             }
         }else{
-            $this->option=$where;
+            $this->option['where']=$where;
         }
         
         echo '<pre>';
@@ -42,18 +51,34 @@ class db{
         
         return $this;
     }
-    
+    //删除
     function delete(){
         $string = '';
-        $sql = "delete from {$this->table} where {$this->option}";
+        if(isset($this->option['where'])){
+            if(is_array($this->option['where'])){
+                foreach ($this->option['where'] as $k => $v){
+                    $string.= ' '.$k.'='.$v.' and';
+                }
+            }else{
+                $string = $this->option['where'];
+            }
+        }
+        
+        $sql = "delete from {$this->table} where{$string}";
+        $sql = rtrim($sql,"and");
+        echo $sql;
         $result = $this->conn->query($sql);
         return $result;
     }
     
+    function add(){}
+    function save(){}
+    function find(){}
+    
 }
 
 $db = new db("mysql","localhost","root","","3306","stu");
-$result = $db->M('stu')->where(array('id'=>3,'name'=>'张飞'))->delete();
+$result = $db->M('stu')->where(array('id'=>5,'name'=>'"王五"'))->delete();
 
 
 if($result){
