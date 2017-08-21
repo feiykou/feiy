@@ -23,6 +23,7 @@
             $this->first();
             $this->prePage();
             $this->nextPage();
+            $this->last();
             return $this->html;
         }
         private function getUrl(){
@@ -61,19 +62,19 @@
         }
         
         private function first(){ //首页
-            if($this->page!=1){
-                $this->html.="<a href='{$this->url}&page=1'>首页</a>";
+            if($this->page!=$this->total){
+                $this->html.="<a href='{$this->url}&page={$this->total}'>首页</a>";
             }else{
                 $this->html.="<span>首页</span>";
             }
         }
         
-        private function first(){ //末页
+        private function last(){ //末页
             if($this->page!=1){
                 $this->html.="<a href='{$this->url}&page=1'>首页</a>";
             }else{
                 $this->html.="<span>首页</span>";
-            }
+            } 
         }
         
         function __get($key){
