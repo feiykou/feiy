@@ -74,7 +74,6 @@ class db implements base{
     function add(){}
     function save(){}
     function find(){}
-    
 }
 
 $db = new db("mysql","localhost","root","","3306","stu");

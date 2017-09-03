@@ -1,0 +1,85 @@
+@charset "UTF-8";
+input,textarea{word-wrap:none;-webkit-user-select:text;-moz-user-select:text;-ms-user-select:text;user-select:text;}
+html{-webkit-text-size-adjust:none;overflow-x:hidden}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,input,textarea,p,span{padding:0;margin:0;}
+body{font:normal 14px/1.2em "Microsoft Yahei","冬青黑体简体中文 w3","宋体"; color: #333;}
+img,html,body{border:0;}
+/** 重置表格元素 **/
+input{border:0; outline: 0;}
+ol,ul{list-style:none;}
+em,i{font-weight:normal;font-style:normal;font-size:100%;}
+h1,h2,h3,h4,h5,h6,em,b{font-weight:normal;}
+.clearfix{*zoom:1;}
+.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+a{color:#333;text-decoration:none;}
+img{vertical-align:middle;}
+.ellipsis{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.hide,.none{display:none}
+.hidden{visibility:hidden;}
+.show,.block{display:block;}
+.bold{font-weight: bold;}
+.inlineb{display:inline-block;}
+.tc{text-align: center;}
+.cp{cursor:pointer;}
+.fl{float:left;}
+.fr{float:right;}
+.pr{position:relative}
+.pa{position:absolute}
+.w1200{ width: 1200px; margin: 0 auto; }
+/*颜色*/
+.col3{color: #333;}
+.col6{color: #666;}
+.col9{color: #999;}
+.colf{color: #fff;}
+.colb0{color: #ff484d;}
+
+/*字体*/
+.font12{font-size: 12px;}
+.font16{font-size: 16px;}
+.font18{font-size: 18px;}
+.font20{font-size: 20px;}
+/*间距*/
+.mt11{margin-top: 11px;}
+.mt10{margin-top: 10px;}
+.mt12{margin-top: 12px;}
+.mt13{margin-top: 13px;}
+.mt14{margin-top: 14px;}
+.mt20{margin-top: 20px;}
+.mt18{margin-top: 18px;}
+.mt4{margin-top: 4px;}
+.mt8{margin-top: 8px;}
+.mt6{margin-top: 6px;}
+.mt30{margin-top: 30px;}
+.mt32{margin-top: 32px;}
+.mt40{margin-top: 40px;}
+.mt27{margin-top: 27px;}
+.mb7{margin-bottom: 7px;}
+.mb6{margin-bottom: 6px;}
+.mb8{margin-bottom: 8px;}
+.mb20{margin-bottom: 20px;}
+.mb11{margin-bottom: 11px;}
+.mb15{margin-bottom: 15px;}
+.mb6{margin-bottom: 6px;}
+.mr6{margin-right: 6px;}
+.mr8{margin-right: 8px;}
+.mr10{margin-right: 10px;}
+.mr15{margin-right: 15px;}
+.mr18{margin-right: 18px;}
+.mr20{margin-right: 20px;}
+.mr25{margin-right: 25px;}
+.mr30{margin-right: 30px;}
+.mr31{margin-right: 31px;}
+.mr32{margin-right: 32px;}
+.mtb10{margin: 10px 0 6px;}
+.nmr20{margin-right: -20px;}
+
+.pl10{padding-left: 10px;}
+.pt20{padding-top: 20px;}
+/*边框*/
+.border0{border: 1px solid #d5d5d5; border-right: 0;}
+.hidden{overflow: hidden;}
+.weight-col{color:#d7000f;}
+/*回到顶部*/
+.bar_top{display: none; position: fixed; right: 40px; bottom: 180px; z-index: 999; cursor: pointer; width: 38px; height: 39px; border: 1px solid #dfdfdf; background: url("http://img.chuandong.com/common/images/getTop.png") no-repeat;}
+/*.bar_top span{ display: block; height: 100%;}*/
+.bar_top:hover{ background-position: 0 -51px;}
