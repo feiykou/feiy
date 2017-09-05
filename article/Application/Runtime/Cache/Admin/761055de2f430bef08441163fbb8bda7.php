@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>{$lists[0].title}</title>
-<link rel="stylesheet" href="__PUBLIC__/bootstrap/css/bootstrap.css">
+<title><?php echo ($lists[0]["title"]); ?></title>
+<link rel="stylesheet" href="/feiystudy/article/Public/bootstrap/css/bootstrap.css">
 
 <style>
 	*{margin:0; padding:0;}
@@ -28,7 +28,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{:U('Article/lists')}">文章管理 <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="<?php echo U('Article/lists');?>">文章管理 <span class="sr-only">(current)</span></a></li>
         <li><a href="#">分类管理</a></li>
       </ul>
       <form class="navbar-form navbar-left" method="post">
@@ -59,19 +59,12 @@
     		</tr>
     	</thead>
     	<tbody>
-    		<volist name="lists" id="v">
-	    		<tr>
-	    			<td>{$v['title']}</td>
-	    			<td>{$v['cateid']}</td>
-	    			<td>{$v['des']}</td>
-	    			<td>{$v['intime']}</td>
-	    			<td>{$v['hits']}</td>
-	    			<td><a href="{:U('edit',array('id'=>$v['articleid']))}">修改</a> | <a href="{:U('delete',array('id'=>$v['articleid']))}">删除</a></td>
-	    		</tr>
-    		</volist>
-    		<tr>
-    			<td colapan="6">{$page}</td>
-    		</tr>
+    		<?php if(is_array($edita)): $i = 0; $__LIST__ = $edita;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+	    			<td><?php echo ($v['title']); ?></td>
+	    			<td><?php echo ($v['cateid']); ?></td>
+	    			<td><?php echo ($v['des']); ?></td>
+	    			<td><a href="<?php echo U('edit',array('id'=>$v['articleid']));?>">修改</a> | <a href="<?php echo U('delete',array('id'=>$v['articleid']));?>">删除</a></td>
+	    		</tr><?php endforeach; endif; else: echo "" ;endif; ?>
     	</tbody>
     </table>
 </body>

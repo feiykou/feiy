@@ -23,12 +23,12 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">Brand</a>
-    </div>
+    </div> 
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/feiystudy/article/index.php/Admin/Acticle/acticle.html">文章管理 <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="<?php echo U('Article/lists');?>">文章管理 <span class="sr-only">(current)</span></a></li>
         <li><a href="#">分类管理</a></li>
       </ul>
       <form class="navbar-form navbar-left" method="post">
@@ -65,7 +65,7 @@
 	    			<td><?php echo ($v['des']); ?></td>
 	    			<td><?php echo ($v['intime']); ?></td>
 	    			<td><?php echo ($v['hits']); ?></td>
-	    			<td><a href="#">修改</a> | <a href="#">删除</a></td>
+	    			<td><a href="<?php echo U('edit',array('id'=>$v['articleid']));?>">修改</a> | <a href="<?php echo U('delete',array('id'=>$v['articleid']));?>">删除</a></td>
 	    		</tr><?php endforeach; endif; else: echo "" ;endif; ?>
     		<tr>
     			<td colapan="6"><?php echo ($page); ?></td>
