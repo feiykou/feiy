@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="<?php echo U('Article/lists');?>">文章管理 <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">分类管理</a></li>
+        <li><a href="<?php echo U('Cate/lists');?>">分类管理</a></li>
       </ul>
       <form class="navbar-form navbar-left" method="post">
         <div class="form-group">
@@ -46,7 +46,9 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-	
+	<div>
+		<a class="btn btn-primary" href="<?php echo U('add');?>">添加</a>
+	</div>
 	<table class="table table-bordered table-hover">
     	<thead>
     		<tr>
@@ -59,10 +61,35 @@
     		</tr>
     	</thead>
     	<tbody>
+    		<!-- 
+    			知识点：如果在前台使用php的函数：
+    			改变日期显示方式：
+    			第一种方式：
+    				<?php echo (date('Y月m日d天',$a )); ?>
+    				$a:后台传过来的变量
+    				date之后是日期格式
+    			第二种方式：
+    				<?php echo date('Y-m-d') ?>
+    				
+    			第三种方式：
+    				<?php echo date('Y-m-d') ?>
+    				在html中没有php标签，但是在tp框架中可以自定义标签
+    				php在tp提供的，它会被tp解析成原生的代码，原理是用正则去匹配
+    			第四种方式：
+    				<?php echo date('Y-m-d');?>
+    				调用php方法，可以在方法前面加上冒号:
+    				好处是：代码简洁，灵活
+    				
+    			总结：方法太多，记住一个就可以	
+    			
+    		 -->
+    		<?php echo date('Y月m-d') ?>
+    		<?php echo date('Y-m-d');?>
     		<?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
 	    			<td><?php echo ($v['title']); ?></td>
-	    			<td><?php echo ($v['cateid']); ?></td>
+	    			<td><?php echo getCateName($v['cateid']);?></td>
 	    			<td><?php echo ($v['des']); ?></td>
+	    			<!-- <?php echo date('Y-m-d h:i',$v['intime']);?> -->
 	    			<td><?php echo ($v['intime']); ?></td>
 	    			<td><?php echo ($v['hits']); ?></td>
 	    			<td><a href="<?php echo U('edit',array('id'=>$v['articleid']));?>">修改</a> | <a href="<?php echo U('delete',array('id'=>$v['articleid']));?>">删除</a></td>

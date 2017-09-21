@@ -60,100 +60,36 @@ class ArticleController extends CommonController {
      * select() 查询得到的是多维数组
      * find() 查询得到的是单数组
      */
-    //edit处理模板，其他部分另外写一个方法
     function edit($id=""){
         
-//         if(!empty($id)){
-           
-//         }
+        if(!empty($id)){
+            $where = 'articleid='.$id.' AND is_del=1';
+        }
         //对于方法中的参数。如果前台页面没有传值，那么就会报错，如果不想传，那么就给一个默认值
         /*
          * IS_POST  判断前台是否是post提交
          */
 //         if(IS_POST){
+//             echo 1;
 // //            $data['content'] = $_POST['content'];
 // //            $data['title'] = $_POST['title'];
 // //            $data['desc'] = $_POST['desc'];
-//             //create()  创建数据对象，前提是提交的数据和数据库中字段的名称是一样的
-//             //使用tp提供的create方法获得数据数组
-//            $data = M('Article')->create();
-           
-//            $rs = M('Article')->where(array('articleid'=>$id))->save($data);
-//             if($rs){
-//                 $this->ajaxReturn(array('error'=>0,'msg'=>'修改成功'));
-//             }else{
-//                 $this->ajaxReturn(array('error'=>1,'data'=>$data,'id'=>$id,'msg'=>'修改失败'));
-//             }
+// //            $rs = M('Article')->where(array('articleid'=>$id))->save($data);
+// //             if($rs){
+// //                 $this->ajaxReturn(array('error'=>0,'msg'=>'修改成功'));
+// //             }else{
+// //                 $this->ajaxReturn(array('error'=>1,'msg'=>'修改失败'));
+// //             }
+//         }else{
+            
 //         }
         
-       
-        $where = 'articleid='.$id;
+        
         $article = M('Article');
         //获取原始数据  
 //         $a = $article->where('articleid='.$id.' AND is_del=1')->select();
         $a = $article->where($where)->find();
-        
-        //获得已有的分类
-        $lists = M('cate')->select();
-        $lists = sortData($lists);
         $this->assign('edita',$a);
-        $this->assign('lists',$lists);
         $this->display();
     }
-    //edit的逻辑部分
-    function handleEdit($id=""){
-      if(IS_POST){
-          $data = M("Article")->create();
-          $rs = M('Article')->where(array("articleid"=>$id))->save($data);
-          if($rs){
-              $this->ajaxReturn(array('error'=>0,'msg'=>'修改成功'));
-          }else{
-              $this->ajaxReturn(array('error'=>1,'data'=>$data,'id'=>$id,'msg'=>'修改失败'));
-          }
-      }else{
-//           exit('非法访问');//阻止页面继续性
-//           $this->redirect('lists','你好像迷路了','','3'); 
-          $this->error("跳转失败",'Article/lists');
-      }
-    }
-    
-    public function add(){//添加文章模板页面
-        //获得已有的分类
-        $lists = M('cate')->select();
-        $lists = sortData($lists);
-        $this->lists = $lists;
-        $this->display();
-    }
-    
-    public function handleAdd(){//添加文章逻辑处理页
-        $article = M('Article');
-        $data = $article->create();
-        $data['intime'] = time();
-        if($article->add()){
-            $this->success("添加成功",U('lists'));
-        }else{
-            $this->success("删除成功");
-        }
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

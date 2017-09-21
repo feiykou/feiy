@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>{$lists[0].title}</title>
-<link rel="stylesheet" href="__PUBLIC__/bootstrap/css/bootstrap.css">
+<title><?php echo ($lists[0]["title"]); ?></title>
+<link rel="stylesheet" href="/feiystudy/article/Public/bootstrap/css/bootstrap.css">
 
 <style>
 	*{margin:0; padding:0;}
@@ -28,7 +28,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{:U('Article/lists')}">文章管理 <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="<?php echo U('Article/lists');?>">文章管理 <span class="sr-only">(current)</span></a></li>
         <li><a href="#">分类管理</a></li>
       </ul>
       <form class="navbar-form navbar-left" method="post">
@@ -57,82 +57,33 @@
 		.text-area{width:600px; height:100px!important; outline:none; padding:10px; color:#666;}	
 	</style>
 	<div class="form-con">
-		<form class="form2">
+		<form class="form2" method="post" action="<?php echo U('handleAdd');?>">
 		  <div class="form-group">
 		    <label for="exampleInputEmail1">文章标题</label>
-		    <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{$edita.title}" placeholder="标题">
+		    <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="<?php echo ($edita["title"]); ?>" placeholder="标题">
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">文章描述</label>
-		    <input type="text" name="des" class="form-control" id="exampleInputPassword1" value="{$edita.des}" placeholder="文章描述">
+		    <input type="text" name="des" class="form-control" id="exampleInputPassword1" value="<?php echo ($edita["des"]); ?>" placeholder="文章描述">
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">所属分类</label>
 		    <div class="dropdown">
 			  	<select name="cateid" class="form-control">
-			  		<volist name="lists" id="vo">
-			  			<option value="{$vo['cateid']}">{:str_repeat($vo['html'],$vo['level'])}{$vo['name']}</option>
-			  		</volist>
+			  		<?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo['cateid']); ?>"><?php echo str_repeat($vo['html'],$vo['level']); echo ($vo['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 			  	</select>
 			</div>
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputFile">文章内容</label>
-		    <p><textarea name="content" class="form-control text-area" placeholder="请填写内容...">{$edita.content}</textarea></p>
+		    <p><textarea name="content" class="form-control text-area" placeholder="请填写内容..."><?php echo ($edita["content"]); ?></textarea></p>
 		  </div>
 		  <button type="submit" class="btn btn-primary">确认提交</button>
 		</form>
 	</div>
-	<table class="table table-bordered table-hover">
-    	<thead>
-    		<tr>
-    			<th>文章标题</th>
-    			<th>所属分类</th>
-    			<th>文章描述</th>
-    			<th>添加时间</th>
-    			<th>点击数</th>
-    			<th>操作</th>
-    		</tr>
-    	</thead>
-    	<tbody>
-    		<tr>
-    			<td>{$edita['title']}</td>
-    			<td>{$edita['cateid']}</td>
-    			<td>{$edita['des']}</td>
-    			<td><a href="{:U('edit',array('id'=>$edita['articleid']))}">修改</a> | <a href="{:U('delete',array('id'=>$v['articleid']))}">删除</a></td>
-    		</tr>
-    	</tbody>
-    </table>
+	
 
-    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-    	$(function(){
-    		$(".btn").click(function(){
-    			/*
-    				$('form:eq(1)')
-    			*/
-    			$.ajax({
-    				url:"{:U('handleEdit',array('id'=>$_GET['id']))}",
-    				data:$('form:eq(1)').serialize(),
-    				type:'POST',
-    				dataType:'json',
-    				success:function(date){
-    					if(!date.error){
-    						alert(date.msg);
-    						setTimeout(function(){
-    							location.href = "{:U('lists')}";
-    						},1000);
-    					}else{
-    						alert("无修改！");
-    					};
-    				}
-    			});
-    			
-    			
-    			return false;
-    		});
-    	});
-    </script>
+    <script type="text/javascript" src="/feiystudy/article/Public/bootstrap/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/feiystudy/article/Public/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

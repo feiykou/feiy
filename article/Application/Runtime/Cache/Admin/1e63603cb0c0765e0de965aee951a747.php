@@ -57,80 +57,41 @@
 		.text-area{width:600px; height:100px!important; outline:none; padding:10px; color:#666;}	
 	</style>
 	<div class="form-con">
-		<form class="form2">
+		<form action="<?php echo U('handleAdd');?>" method="post">
 		  <div class="form-group">
-		    <label for="exampleInputEmail1">文章标题</label>
-		    <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="<?php echo ($edita["title"]); ?>" placeholder="标题">
+		  	<label for="exampleInputEmail1">分类名称</label>
+		    <input type="text" name="name" class="form-control" id="exampleInputEmail1" value="<?php echo ($edita["title"]); ?>" placeholder="标题">
 		  </div>
 		  <div class="form-group">
-		    <label for="exampleInputPassword1">文章描述</label>
-		    <input type="text" name="des" class="form-control" id="exampleInputPassword1" value="<?php echo ($edita["des"]); ?>" placeholder="文章描述">
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputPassword1">所属分类</label>
-		    <div class="dropdown">
-			  	<select name="cateid" class="form-control">
-			  		<?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo['cateid']); ?>"><?php echo str_repeat($vo['html'],$vo['level']); echo ($vo['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+		  	<label for="exampleInputEmail1">分类名称</label>
+		  	<!--
+		  		输出时间的四种方式：
+		  		 <?php echo date('Y-m-d',$time);?>  Y:输出的是详细年份eg:2017 y:输出的是后两位eg:17
+		  		 <?php echo date('Y-m-d') ?>
+		  		 <?php echo date('Y-m-d') ?>
+		  		 <?php echo (date('Y-m-d',$time )); ?> //这种方式只支持date函数
+		  		 以上四种比较简洁的是第一种
+		  	 -->
+
+		  	
+		  	<div class="dropdown">
+			  	<select name="pid" class="form-control">
+			  		<option value="0">顶级分类</option>
+			  		<?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["cateid"]); ?>"><?php echo str_repeat($vo['html'],$vo['level']); echo ($vo["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 			  	</select>
-			</div>
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputFile">文章内容</label>
-		    <p><textarea name="content" class="form-control text-area" placeholder="请填写内容..."><?php echo ($edita["content"]); ?></textarea></p>
-		  </div>
+			 </div>
+		  </div> 
+		  
+		
+		
 		  <button type="submit" class="btn btn-primary">确认提交</button>
+		
+		
 		</form>
 	</div>
-	<table class="table table-bordered table-hover">
-    	<thead>
-    		<tr>
-    			<th>文章标题</th>
-    			<th>所属分类</th>
-    			<th>文章描述</th>
-    			<th>添加时间</th>
-    			<th>点击数</th>
-    			<th>操作</th>
-    		</tr>
-    	</thead>
-    	<tbody>
-    		<tr>
-    			<td><?php echo ($edita['title']); ?></td>
-    			<td><?php echo ($edita['cateid']); ?></td>
-    			<td><?php echo ($edita['des']); ?></td>
-    			<td><a href="<?php echo U('edit',array('id'=>$edita['articleid']));?>">修改</a> | <a href="<?php echo U('delete',array('id'=>$v['articleid']));?>">删除</a></td>
-    		</tr>
-    	</tbody>
-    </table>
+	
 
     <script type="text/javascript" src="/feiystudy/article/Public/bootstrap/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/feiystudy/article/Public/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-    	$(function(){
-    		$(".btn").click(function(){
-    			/*
-    				$('form:eq(1)')
-    			*/
-    			$.ajax({
-    				url:"<?php echo U('handleEdit',array('id'=>$_GET['id']));?>",
-    				data:$('form:eq(1)').serialize(),
-    				type:'POST',
-    				dataType:'json',
-    				success:function(date){
-    					if(!date.error){
-    						alert(date.msg);
-    						setTimeout(function(){
-    							location.href = "<?php echo U('lists');?>";
-    						},1000);
-    					}else{
-    						alert("无修改！");
-    					};
-    				}
-    			});
-    			
-    			
-    			return false;
-    		});
-    	});
-    </script>
 </body>
 </html>

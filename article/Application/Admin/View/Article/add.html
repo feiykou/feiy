@@ -57,7 +57,7 @@
 		.text-area{width:600px; height:100px!important; outline:none; padding:10px; color:#666;}	
 	</style>
 	<div class="form-con">
-		<form class="form2">
+		<form class="form2" method="post" action="{:U('handleAdd')}">
 		  <div class="form-group">
 		    <label for="exampleInputEmail1">文章标题</label>
 		    <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{$edita.title}" placeholder="标题">
@@ -83,56 +83,9 @@
 		  <button type="submit" class="btn btn-primary">确认提交</button>
 		</form>
 	</div>
-	<table class="table table-bordered table-hover">
-    	<thead>
-    		<tr>
-    			<th>文章标题</th>
-    			<th>所属分类</th>
-    			<th>文章描述</th>
-    			<th>添加时间</th>
-    			<th>点击数</th>
-    			<th>操作</th>
-    		</tr>
-    	</thead>
-    	<tbody>
-    		<tr>
-    			<td>{$edita['title']}</td>
-    			<td>{$edita['cateid']}</td>
-    			<td>{$edita['des']}</td>
-    			<td><a href="{:U('edit',array('id'=>$edita['articleid']))}">修改</a> | <a href="{:U('delete',array('id'=>$v['articleid']))}">删除</a></td>
-    		</tr>
-    	</tbody>
-    </table>
+	
 
     <script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-    	$(function(){
-    		$(".btn").click(function(){
-    			/*
-    				$('form:eq(1)')
-    			*/
-    			$.ajax({
-    				url:"{:U('handleEdit',array('id'=>$_GET['id']))}",
-    				data:$('form:eq(1)').serialize(),
-    				type:'POST',
-    				dataType:'json',
-    				success:function(date){
-    					if(!date.error){
-    						alert(date.msg);
-    						setTimeout(function(){
-    							location.href = "{:U('lists')}";
-    						},1000);
-    					}else{
-    						alert("无修改！");
-    					};
-    				}
-    			});
-    			
-    			
-    			return false;
-    		});
-    	});
-    </script>
 </body>
 </html>

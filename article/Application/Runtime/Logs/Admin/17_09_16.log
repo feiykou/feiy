@@ -1,0 +1,514 @@
+[ 2017-09-16T12:20:46+08:00 ] ::1 /feiystudy/article/index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001099s ]
+
+[ 2017-09-16T12:20:46+08:00 ] ::1 /feiystudy/article/index.php/Admin/Access/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000399s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000513s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000851s ]
+
+[ 2017-09-16T12:20:46+08:00 ] ::1 /feiystudy/article/index.php/Admin/Access/code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000681s ]
+
+[ 2017-09-16T12:20:47+08:00 ] ::1 /feiystudy/article/index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+
+[ 2017-09-16T12:20:47+08:00 ] ::1 /feiystudy/article/index.php/Admin/Access/code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2017-09-16T12:20:57+08:00 ] ::1 /feiystudy/article/index.php/Admin/Access/handle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `feiy_user` [ RunTime:0.0051s ]
+NOTIC: [8] Undefined index: validate D:\SoftDownload\wamp\www\feiystudy\article\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\SoftDownload\wamp\www\feiystudy\article\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `feiy_user` WHERE `username` = 'admin ' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-09-16T12:20:57+08:00 ] ::1 /feiystudy/article/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Use of undefined constant get_client_ip - assumed 'get_client_ip' D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007592s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000992s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000972s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2017-09-16T12:20:59+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0044s ]
+SQL: SELECT t1.*,t2.name as pname FROM feiy_cate t1 left JOIN feiy_cate as t2 on t1.pid = t2.cateid   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 5 行.
+NOTIC: [8] Use of undefined constant pname - assumed 'pname' D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 81 行.
+NOTIC: [8] Undefined index: articleid D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 90 行.
+NOTIC: [8] Use of undefined constant pname - assumed 'pname' D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 81 行.
+NOTIC: [8] Undefined index: articleid D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 90 行.
+NOTIC: [8] Use of undefined constant pname - assumed 'pname' D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 81 行.
+NOTIC: [8] Undefined index: articleid D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 90 行.
+NOTIC: [8] Use of undefined constant pname - assumed 'pname' D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 81 行.
+NOTIC: [8] Undefined index: articleid D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 90 行.
+NOTIC: [8] Use of undefined constant pname - assumed 'pname' D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 81 行.
+NOTIC: [8] Undefined index: articleid D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 90 行.
+NOTIC: [8] Use of undefined constant pname - assumed 'pname' D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 81 行.
+NOTIC: [8] Undefined index: articleid D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 90 行.
+NOTIC: [8] Use of undefined constant pname - assumed 'pname' D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 81 行.
+NOTIC: [8] Undefined index: articleid D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 90 行.
+NOTIC: [8] Undefined variable: page D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\761bd6d3753c4667d3750f040418af5e.php 第 93 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012542s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012661s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\SoftDownload\wamp\www\feiystudy\article\ThinkPHP\Library\Think\View.class.php:95) D:\SoftDownload\wamp\www\feiystudy\article\index.php 第 28 行.
+
+[ 2017-09-16T12:21:01+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2017-09-16T12:22:23+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-09-16T12:22:54+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2017-09-16T12:23:03+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007627s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007763s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2017-09-16T12:31:10+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006785s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000614s ]
+
+[ 2017-09-16T12:32:22+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2017-09-16T12:32:49+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006441s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2017-09-16T12:32:50+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2017-09-16T12:33:00+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-09-16T12:33:12+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006367s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006465s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2017-09-16T12:33:20+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006897s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2017-09-16T12:33:26+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000617s ]
+
+[ 2017-09-16T12:35:01+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006888s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2017-09-16T12:35:03+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006771s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006892s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000608s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000699s ]
+
+[ 2017-09-16T12:35:20+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007205s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007300s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000580s ]
+
+[ 2017-09-16T12:36:46+08:00 ] ::1 /feiystudy/article/index.php/Admin/Cate/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `feiy_cate` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `feiy_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined index: title D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 5 行.
+NOTIC: [8] Undefined variable: edita D:\SoftDownload\wamp\www\feiystudy\article\Application\Runtime\Cache\Admin\1e63603cb0c0765e0de965aee951a747.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006405s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000571s ]
+

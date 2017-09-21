@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="<?php echo U('Article/lists');?>">文章管理 <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">分类管理</a></li>
+        <li><a href="<?php echo U('Cate/lists');?>">分类管理</a></li>
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">

@@ -15,7 +15,7 @@ class ArticleModel extends Model {
         
         $count = $this->where($where)->count();
         // 实例化分页类 传入总记录数和每页显示的记录数
-        $Page = new \Think\Page($count,1);
+        $Page = new \Think\Page($count,3);
         $list = $this
             ->order('articleid desc')
             ->where($where)
