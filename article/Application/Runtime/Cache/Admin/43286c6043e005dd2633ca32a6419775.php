@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/feiystudy/article/Public/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/feiyArticle/article/Public/bootstrap/css/bootstrap.css">
 
 <style>
 	.modal{display:block;}
@@ -48,8 +48,8 @@
 	  </div>
 	</div>
 <?php echo U('handle');?>
-     <script src="/feiystudy/article/Public/bootstrap/js/jquery-1.12.4.min.js"></script>
-     <script src="/feiystudy/article/Public/bootstrap/js/bootstrap.min.js"></script>
+     <script src="/feiyArticle/article/Public/bootstrap/js/jquery-1.12.4.min.js"></script>
+     <script src="/feiyArticle/article/Public/bootstrap/js/bootstrap.min.js"></script>
    	 <script>
    	 	$(function(){
    	 		$("button").on("click",function(){

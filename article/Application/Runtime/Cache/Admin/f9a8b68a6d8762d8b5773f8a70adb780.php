@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title><?php echo ($lists[0]["title"]); ?></title>
-<link rel="stylesheet" href="/feiystudy/article/Public/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/feiyArticle/article/Public/bootstrap/css/bootstrap.css">
 
 <style>
 	*{margin:0; padding:0;}
@@ -92,7 +92,7 @@
 	    			<!-- <?php echo date('Y-m-d h:i',$v['intime']);?> -->
 	    			<td><?php echo ($v['intime']); ?></td>
 	    			<td><?php echo ($v['hits']); ?></td>
-	    			<td><a href="<?php echo U('edit',array('id'=>$v['articleid']));?>">修改</a> | <a href="<?php echo U('delete',array('id'=>$v['articleid']));?>">删除</a></td>
+	    			<td><a href="<?php echo U('detail',array('id'=>$v['articleid']));?>">预览</a> |<a href="<?php echo U('edit',array('id'=>$v['articleid']));?>">修改</a> | <a href="<?php echo U('delete',array('id'=>$v['articleid']));?>">删除</a></td>
 	    		</tr><?php endforeach; endif; else: echo "" ;endif; ?>
     		<tr>
     			<td colapan="6"><?php echo ($page); ?></td>

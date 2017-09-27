@@ -93,7 +93,7 @@
 	    			<!-- {:date('Y-m-d h:i',$v['intime'])} -->
 	    			<td>{$v['intime']}</td>
 	    			<td>{$v['hits']}</td>
-	    			<td><a href="{:U('edit',array('id'=>$v['articleid']))}">修改</a> | <a href="{:U('delete',array('id'=>$v['articleid']))}">删除</a></td>
+	    			<td><a href="{:U('detail',array('id'=>$v['articleid']))}">预览</a> |<a href="{:U('edit',array('id'=>$v['articleid']))}">修改</a> | <a href="{:U('delete',array('id'=>$v['articleid']))}">删除</a></td>
 	    		</tr>
     		</volist>
     		<tr>

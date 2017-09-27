@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title><?php echo ($lists[0]["title"]); ?></title>
-<link rel="stylesheet" href="/feiystudy/article/Public/bootstrap/css/bootstrap.css">
-
+<link rel="stylesheet" href="/feiyArticle/article/Public/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/feiyArticle/article/Public/uploader/webuploader.css">
+<script type="text/javascript" src="/feiyArticle/article/Public/bootstrap/js/jquery-1.12.4.min.js"></script>
+<!--引入webuploaderJS-->
+<script type="text/javascript" src="/feiyArticle/article/Public/uploader/webuploader.js"></script>
 <style>
 	*{margin:0; padding:0;}
 	body{font-family:"微软雅黑"; font-size:14px; color:#333;}
@@ -66,6 +69,34 @@
 		    <label for="exampleInputPassword1">文章描述</label>
 		    <input type="text" name="des" class="form-control" id="exampleInputPassword1" value="<?php echo ($edita["des"]); ?>" placeholder="文章描述">
 		  </div>
+		  <style>
+			.clearfix{*zoom:1;}
+			.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+			ul,li{list-style:none;}
+		  	.wu-example{float:left;}
+			.img-list{float:left;}
+			.img-list li{position:relative; float:left; width:120px; height:120px; border:1px solid #ddd; padding:1px; margin-left:10px;}
+		  	.img-list li img{width:100%; height:100%;}
+			.img-list li .del{position:absolute; bottom:0; left:0;opacity:0.8; width:100%; height:22px; line-height:22px; text-align:center; background-color:#d7000f; color:#fff; cursor:pointer; font-size:12px;}
+		  	.img-list li .del:hover{opacity:1;}
+		  </style>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">图片</label>
+		    <div class="upload clearfix">
+		    	<div id="uploader" class="wu-example">
+				    <!--用来存放文件信息-->
+				    <div id="thelist" class="uploader-list"></div>
+				    <div class="btns">
+				        <div id="update">选择文件</div>
+				        <!--<button id="ctlBtn" class="btn btn-default">开始上传</button>-->
+				    </div>
+				</div>
+				<ul class="img-list">
+					
+				</ul>
+		    </div>	
+		  </div>
+		  
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">所属分类</label>
 		    <div class="dropdown">
@@ -76,14 +107,93 @@
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputFile">文章内容</label>
-		    <p><textarea name="content" class="form-control text-area" placeholder="请填写内容..."><?php echo ($edita["content"]); ?></textarea></p>
+		    <p><textarea id="container" name="content" placeholder="请填写内容..."></textarea></p>
 		  </div>
 		  <button type="submit" class="btn btn-primary">确认提交</button>
 		</form>
 	</div>
 	
 
-    <script type="text/javascript" src="/feiystudy/article/Public/bootstrap/js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="/feiystudy/article/Public/bootstrap/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="/feiyArticle/article/Public/bootstrap/js/bootstrap.min.js"></script>
+    
+    
+    
+    <script>
+	    var uploader = WebUploader.create({
+			
+	        // swf文件路径,如果路径不对，则html则不会有效果
+	        swf: '/feiyArticle/article/Public/uploader/Uploader.swf',
+			
+	        // 文件接收服务端。
+	        server: '<?php echo U("uploadFile");?>',
+	
+	        // 选择文件的按钮。可选。
+	        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+	        pick: '#update',
+	        
+	        //选完文件后，是否自动上传
+	        auto:true,
+	
+	        // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+	        resize: false,
+	        //fileNumLimit: 5,
+	        //sendAsBinary:true,  //指明使用二进制的方式上传文件
+            //fileVal:"upload",   //指明参数名称，后台也用这个参数接收文件
+           // fileSingleSizeLimit: 5242880,
+           // 只允许选择图片文件格式
+	        accept: {
+	            title: 'Images',
+	            extensions: 'gif,jpg,bmp,png',
+	            mimeTypes: 'image/*'
+	        }
+	    });
+	    //文件上传成功执行
+	    uploader.on( 'uploadSuccess', function( file,data) {
+	    	if(data.error==0){
+	    		var html = "<li>"+
+	    		"	<img src='/feiyArticle/article"+data.path+"'>"+
+	    		"	<span class='del'>删除</span>"+
+	    		"	<input type='hidden' name='path' value='"+data.path+"'>"+
+	    		"</li>";
+	    		$(".img-list").append(html);
+	    	}
+	    });
+	    //文件上传失败执行
+	    uploader.on( 'uploadError', function( file ) {
+	    	console.log("失败"+file);
+	    });
+	    //文件上传之后，不管成功或失败都执行
+	    uploader.on( 'uploadComplete', function( file ) {
+	    	console.log("上传完成"+file);
+	    });
+	    
+	    $(".img-list").on("click",'.del',function(){
+	    	$(this).parent().remove();
+	    });
+    </script>
+    
+    <!-- ueditor配置文件 -->
+	<script type="text/javascript" src="/feiyArticle/article/Public/Ueditor/ueditor.config.js"></script>
+	<!-- ueditor编辑器源码文件 -->
+	<script type="text/javascript" src="/feiyArticle/article/Public/Ueditor/ueditor.all.min.js"></script>
+	 <!-- 实例化编辑器 -->
+	<script type="text/javascript">
+		//主要针对不在同一层的文件调用编辑器
+		window.UEDITOR_HOME_URL = "/feiyArticle/article/Public/Ueditor/";
+		window.onload = function(){
+			//注意：设置编辑器属性要在初始化编辑器之前设置，否则无效果
+			window.UEDITOR_CONFIG.initialFrameWidth = 800;  //设置编辑框的宽度
+		    window.UEDITOR_CONFIG.initialFrameHeight = 600; //设置编辑框的高度
+		    //设置编辑器高度不自动加高
+		  	window.UEDITOR_CONFIG.autoHeightEnabled=false;
+			var ue = UE.getEditor('container');
+		}
+	</script>
+	
+	
+	
+	
+	
 </body>
 </html>

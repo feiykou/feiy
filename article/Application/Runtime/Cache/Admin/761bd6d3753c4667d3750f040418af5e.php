@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title><?php echo ($lists[0]["title"]); ?></title>
-<link rel="stylesheet" href="/feiystudy/article/Public/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/feiyArticle/article/Public/bootstrap/css/bootstrap.css">
 
 <style>
 	*{margin:0; padding:0;}

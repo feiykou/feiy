@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title><?php echo ($lists[0]["title"]); ?></title>
-<link rel="stylesheet" href="/feiystudy/article/Public/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/feiyArticle/article/Public/bootstrap/css/bootstrap.css">
 
 <style>
 	*{margin:0; padding:0;}
@@ -91,7 +91,7 @@
 	</div>
 	
 
-    <script type="text/javascript" src="/feiystudy/article/Public/bootstrap/js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="/feiystudy/article/Public/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/feiyArticle/article/Public/bootstrap/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/feiyArticle/article/Public/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

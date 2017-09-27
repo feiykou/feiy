@@ -10,7 +10,6 @@ class ArticleController extends CommonController {
     
     //curd对应文章的增删改查
     public function lists(){ //文章列表页
-      
         /*
          * count()  查询符合条件的条数
          */
@@ -104,6 +103,7 @@ class ArticleController extends CommonController {
     function handleEdit($id=""){
       if(IS_POST){
           $data = M("Article")->create();
+          $data["content"] = $_POST["content"];
           $rs = M('Article')->where(array("articleid"=>$id))->save($data);
           if($rs){
               $this->ajaxReturn(array('error'=>0,'msg'=>'修改成功'));
@@ -126,13 +126,41 @@ class ArticleController extends CommonController {
     }
     
     public function handleAdd(){//添加文章逻辑处理页
-        $article = M('Article');
+        $article = D('Article');
         $data = $article->create();
         $data['intime'] = time();
-        if($article->add()){
+        $data['content'] = $_POST['content'];
+        if($article->add($data)){
             $this->success("添加成功",U('lists'));
         }else{
             $this->success("删除成功");
+        }
+    }
+    
+    
+    function detail($id){
+//         $lists = M("article")->where(array(articleid=>$id))->select();
+//         $this->assign("lists",$lists);
+        $lists = M("article")->find($id);
+        $this->lists = $lists;
+        $this->display();
+    }
+    
+    public function uploadFile(){
+//         p($_FILES);
+//         echo "<br>==========<br>";
+//         p($_POST);
+        //$_SERVER['DOCUMENT_ROOT']
+        $upload = new \Think\Upload();// 实例化上传类    
+        $upload->maxSize   =     3145728 ;// 设置附件上传大小    
+        $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型    
+        $upload->rootPath  =      './Public'; // 设置附件上传根目录    // 上传文件
+        $upload->savePath  =      './Uploads/'; // 设置附件上传保存目录    // 上传文件     
+        $info   =   $upload->upload();
+        if(!$info) {// 上传错误提示错误信息        
+            $this->error($upload->getError());    
+        }else{// 上传成功        
+            $this->ajaxReturn(array('error'=>0,'path'=>"./Public".$info['file']['savepath'].$info['file']['savename']));
         }
     }
     

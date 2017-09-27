@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>大闸蟹</title>
     
-    <link rel="stylesheet" href="/feiystudy/article/Public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/feiyArticle/article/Public/bootstrap/css/bootstrap.css">
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -47,7 +47,7 @@
   
 </nav>
      
-     <script src="/feiystudy/article/Public/bootstrap/js/jquery-1.12.4.min.js"></script>
-     <script src="/feiystudy/article/Public/bootstrap/js/bootstrap.min.js"></script>
+     <script src="/feiyArticle/article/Public/bootstrap/js/jquery-1.12.4.min.js"></script>
+     <script src="/feiyArticle/article/Public/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
