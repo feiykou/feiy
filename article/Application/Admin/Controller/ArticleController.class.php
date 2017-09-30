@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Admin\Controller\CommonController;
 class ArticleController extends CommonController {
     
-    function __initialize(){
+    function _initialize(){
         parent::_initialize();
         $this->db = D('Article');
     }
@@ -104,6 +104,10 @@ class ArticleController extends CommonController {
       if(IS_POST){
           $data = M("Article")->create();
           $data["content"] = $_POST["content"];
+          if($data['path']==""){
+              $link = M("article")->where(array("articleid"=>$id))->find();
+              unlink($_SERVER['DOCUMENT_ROOT'].__ROOT__.$link['path']);
+          }
           $rs = M('Article')->where(array("articleid"=>$id))->save($data);
           if($rs){
               $this->ajaxReturn(array('error'=>0,'msg'=>'修改成功'));
@@ -160,7 +164,27 @@ class ArticleController extends CommonController {
         if(!$info) {// 上传错误提示错误信息        
             $this->error($upload->getError());    
         }else{// 上传成功        
-            $this->ajaxReturn(array('error'=>0,'path'=>"./Public".$info['file']['savepath'].$info['file']['savename']));
+            $this->ajaxReturn(array('error'=>0,'path'=>"/Public".$info['file']['savepath'].$info['file']['savename']));
+        }
+    }
+     
+    /*
+     * 删除图片
+     * 
+     * 注意：常量是大写
+     * APP_PATH:                   ./Application/
+     * $_SERVER['DOCUMENT_ROOT']   D:/feiy_soft/wamp/www/
+     * __ROOT__                    /feiyArticle/article
+     * 
+     * 
+     * 注意：删除文件必须是全路径D:/feiy_soft/wamp/www//feiyArticle/article/Public./Uploads/2017-09-28/59cc6c1fca366.jpg
+     */
+    public function delImg(){
+        $path = $_SERVER['DOCUMENT_ROOT'].$_POST["path"];
+        if(unlink($path)){
+            $this->ajaxReturn(array("error"=>0,'msg'=>"删除成功"));
+        }else{
+            $this->ajaxReturn(array('error'=>1,'msg'=>"删除失败"));
         }
     }
     

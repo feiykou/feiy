@@ -34,4 +34,19 @@
     }
     
     
+    /*
+     * 角色转换成中文
+     * 问题：当角色设置禁用时，用户这边角色没有改变
+     */
+    function getGroupName($id){
+        $group_id = M("group_access")->where(array("uid"=>$id))->getField('group_id',true);
+        if($group_id){
+            $group_name = M("auth_group")->where(array("id"=>array("in",$group_id)))->getField("title",true);
+        }else{
+            return "无角色";
+        }
+        return implode(",",$group_name);
+    }
+    
+    
 ?>

@@ -1,64 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>{$lists[0].title}</title>
-<link rel="stylesheet" href="__PUBLIC__/bootstrap/css/bootstrap.css">
-<link rel="stylesheet" href="__PUBLIC__/uploader/webuploader.css">
-<script type="text/javascript" src="__PUBLIC__/bootstrap/js/jquery-1.12.4.min.js"></script>
-<!--引入webuploaderJS-->
-<script type="text/javascript" src="__PUBLIC__/uploader/webuploader.js"></script>
-<style>
-	*{margin:0; padding:0;}
-	body{font-family:"微软雅黑"; font-size:14px; color:#333;}
-	.table{width:800px; margin:60px auto;}
-</style>
-</head>
-<body>
-	 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div> 
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="{:U('Article/lists')}">文章管理 <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">分类管理</a></li>
-      </ul>
-      <form class="navbar-form navbar-left" method="post">
-        <div class="form-group">
-          <input type="text" name="key" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">搜索</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">admin</a></li>
-        <li class="dropdown">
-          <a href="/feiystudy/article/index.php/Admin/Access/logout.html">退出登录</a>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+<extend name="public:public" />
+<block name="title">{$lists[0].title}</block>
+<block name="include_file">
+	<link rel="stylesheet" href="__PUBLIC__/uploader/webuploader.css">
+	<!--引入webuploaderJS-->
+	<script type="text/javascript" src="__PUBLIC__/uploader/webuploader.js"></script>
+</block>
+<block name="css">
 	<style>
-		.form-con{width:800px; margin:50px auto;}
+		*{margin:0; padding:0;}
+		body{font-family:"微软雅黑"; font-size:14px; color:#333;}
+		.table{width:800px; margin:60px auto;}
+		.clearfix{*zoom:1;}
+		.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+		ul,li{list-style:none;}
+	  	.wu-example{float:left;}
+		.img-list{float:left;}
+		.img-list li{position:relative; float:left; width:120px; height:120px; border:1px solid #ddd; padding:1px; margin-left:10px;}
+	  	.img-list li img{width:100%; height:100%;}
+		.img-list li .del{position:absolute; bottom:0; left:0;opacity:0.8; width:100%; height:22px; line-height:22px; text-align:center; background-color:#d7000f; color:#fff; cursor:pointer; font-size:12px;}
+	  	.img-list li .del:hover{opacity:1;}
+.form-con{width:800px; margin:50px auto;}
 		.form-control:focus {
 		    border-color: #66afe9;
 		    outline: 0;
 		    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
 		    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
 		}
-		.text-area{width:600px; height:100px!important; outline:none; padding:10px; color:#666;}	
+		.text-area{width:600px; height:100px!important; outline:none; padding:10px; color:#666;}
 	</style>
+</block>
+
+<block name="body">
 	<div class="form-con">
 		<form class="form2" method="post" action="{:U('handleAdd')}">
 		  <div class="form-group">
@@ -69,17 +41,6 @@
 		    <label for="exampleInputPassword1">文章描述</label>
 		    <input type="text" name="des" class="form-control" id="exampleInputPassword1" value="{$edita.des}" placeholder="文章描述">
 		  </div>
-		  <style>
-			.clearfix{*zoom:1;}
-			.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
-			ul,li{list-style:none;}
-		  	.wu-example{float:left;}
-			.img-list{float:left;}
-			.img-list li{position:relative; float:left; width:120px; height:120px; border:1px solid #ddd; padding:1px; margin-left:10px;}
-		  	.img-list li img{width:100%; height:100%;}
-			.img-list li .del{position:absolute; bottom:0; left:0;opacity:0.8; width:100%; height:22px; line-height:22px; text-align:center; background-color:#d7000f; color:#fff; cursor:pointer; font-size:12px;}
-		  	.img-list li .del:hover{opacity:1;}
-		  </style>
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">图片</label>
 		    <div class="upload clearfix">
@@ -115,12 +76,8 @@
 		</form>
 	</div>
 	
-
-    
-    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
-    
-    
-    
+</block>
+<block name="bottom_script">
     <script>
 	    var uploader = WebUploader.create({
 			
@@ -171,7 +128,19 @@
 	    });
 	    
 	    $(".img-list").on("click",'.del',function(){
-	    	$(this).parent().remove();
+	    	var path = $(this).prev().attr("src");
+	    	var that = $(this);
+	    	$.ajax({
+	    		url:"{:U('delImg')}",
+	    		data:{"path":path},
+	    		type:"post",
+	    		success:function(data){
+	    			if(data.error==0){
+	    				that.parent().remove();
+	    				alert(data.msg);
+	    			}
+	    		}
+	    	});
 	    });
     </script>
     
@@ -192,10 +161,4 @@
 			var ue = UE.getEditor('container');
 		}
 	</script>
-	
-	
-	
-	
-	
-</body>
-</html>
+</block>	

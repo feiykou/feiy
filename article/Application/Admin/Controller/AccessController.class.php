@@ -4,11 +4,11 @@ use Think\Controller;
 class AccessController extends Controller {
     //登录模板页面
     public function login(){
-        echo md5(123456);
+        echo md5(123);
         //模板页面
         $this->display();
     }
-    
+     
     public function code(){
         $config = array(
             'length'=>2
@@ -24,6 +24,12 @@ class AccessController extends Controller {
        if(!$data){
            $this->ajaxReturn(array('error'=>1,'msg'=>$user->getError()));
        }else{
+           //1、首先验证验证码
+           $verify = new \Think\Verify();
+           if(!$verify->check($_POST['code'])){
+               $this->ajaxReturn(array('error'=>1,'msg'=>"验证码错误"));
+           };
+           
            $data['password'] = md5($data['password']);
            if($login = $user->where($data)->find()){
                $_SESSION['userid'] = $login['userid'];
@@ -32,7 +38,6 @@ class AccessController extends Controller {
            }else{
                $this->ajaxReturn(array('error'=>1,'msg'=>"用户名或密码错误"));
            };
-          
        };
     }
     

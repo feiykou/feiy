@@ -67,7 +67,7 @@
    	 							$(".alert").remove();
    	 						},1000);
    	 					}else{
-   	 						location.href="<?php echo U('Index/index');?>";
+   	 						location.href="<?php echo U('Article/lists');?>";
    	 					}
    	 				}
    	 			});
